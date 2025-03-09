@@ -1,3 +1,7 @@
 54.221.90.77
 54.172.144.145
 52.72.247.126
+
+[all:vars]
+ansible_ssh_private_key_file=~/.ssh/ansibleK.pem
+ansible_user=ec2-user
