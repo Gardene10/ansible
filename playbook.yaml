@@ -1,0 +1,16 @@
+---
+- hosts: all
+  remote_user: ec2-user
+  become: yes 
+
+  tasks:
+  - name: Install nginx
+    dnf:
+      name: nginx
+      state: present
+      update_cache: yes
+  - name: Start nginx
+    service:
+      name: nginx
+      state: restarted
+     
