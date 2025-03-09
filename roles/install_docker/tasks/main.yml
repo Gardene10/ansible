@@ -29,16 +29,13 @@
     name: docker
     state: started
     enabled: yes
-- name: Install dependencies
-  dnf:
-    name:
-      - python3-pip  # Adicionando pip para instalar o Docker Compose
-    state: present
 
 - name: Install Docker Compose
-  pip:
-    name: docker-compose
-    state: present
+  shell: |
+    curl -L https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r .tag_name)/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+  args:
+    creates: /usr/local/bin/docker-compose
 
 - name: Verify Docker Compose installation
   command: docker-compose --version
@@ -48,4 +45,3 @@
 - name: Show Docker Compose version
   debug:
     msg: "Docker Compose version: {{ docker_compose_version.stdout }}"
-
