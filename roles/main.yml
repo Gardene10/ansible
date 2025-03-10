@@ -9,4 +9,9 @@
   become: yes
   roles:
     - docker_swarm_manager
+
+- hosts: worker
+  become: yes
+  roles:
+    - docker_swarm_worker
   
