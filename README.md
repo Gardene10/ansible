@@ -6,14 +6,6 @@ Este projeto automatiza a implantação de um cluster Docker Swarm usando Ansibl
 
 ### Principais Conquistas:
 
-- 🏗️ **Configuração da Infraestrutura:** Provisionamento das instâncias EC2 e gerenciamento do inventário.
-- 📦 **Integração com Ansible Galaxy:** Estruturou o projeto utilizando Ansible Galaxy para modularidade.
-- 🐋 **Instalação do Docker:** Instalou Docker e Docker Compose em todas as instâncias EC2.
-- ⚙️ **Cluster Docker Swarm:** Configurou um cluster Docker Swarm com um nó gerente e dois nós trabalhadores.
-- 🔧 **Automação da Implantação:** Automatizou o processo de implantação em várias máquinas.
-
-### Histórico de Commits 📝
-
 1. 🚀 **Inicialização do Projeto:**
    - Criou o arquivo de inventário e verificou a conexão com todas as três máquinas.
 2. 📦 **Integração com Ansible Galaxy:**
@@ -59,14 +51,6 @@ This project automates the deployment of a Docker Swarm cluster using Ansible on
 ## Project Overview 🌟
 
 ### Key Achievements:
-
-- 🏗️ **Infrastructure Setup:** Provisioned EC2 instances and managed the inventory.
-- 📦 **Integration with Ansible Galaxy:** Structured the project using Ansible Galaxy for modularity.
-- 🐋 **Docker Installation:** Installed Docker and Docker Compose on all EC2 instances.
-- ⚙️ **Docker Swarm Cluster:** Configured a Docker Swarm cluster with one manager node and two worker nodes.
-- 🔧 **Deployment Automation:** Automated the deployment process across multiple machines.
-
-### Commit History 📝
 
 1. 🚀 **Project Initialization:**
    - Created the inventory file and verified connection with all three machines.
