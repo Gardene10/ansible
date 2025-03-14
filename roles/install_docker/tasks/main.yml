@@ -5,7 +5,7 @@
       dnf:
         name: python3-requests
         state: absent
-      become: yes
+      become: true
 
     # Step 2: Install required dependencies
     - name: Install dependencies
@@ -60,6 +60,12 @@
     - name: Show Docker Compose version
       debug:
         msg: "Docker Compose version: {{ docker_compose_version.stdout }}"
+# intall pip3 and docker sdk for python
+    - name: Install pip3 on Amazon Linux
+      dnf:
+        name: python3-pip
+        state: present
+
 
     # Step 9: Install Docker SDK for Python
     - name: Install Docker SDK for Python
@@ -67,3 +73,24 @@
         name: docker
         state: present
         extra_args: --no-deps
+        
+    - name: Install requests library
+      ansible.builtin.pip:
+        name: requests
+        state: present
+        #mudei
+        # Step 10: Add ec2-user to docker group
+    - name: Add ec2-user to docker group
+      user:
+        name: ec2-user
+        groups: docker
+        append: yes
+
+    # Step 11: Restart Docker service (to apply group change)
+    - name: Restart Docker service to apply group changes
+      systemd:
+        name: docker
+        state: restarted
+
+   
+
