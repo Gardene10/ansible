@@ -38,7 +38,10 @@ cd ansible
 ```
 
 2. Atualize o arquivo de inventário com os endereços IP das suas instâncias EC2.
-3. Execute o playbook:
+3. 
+ ⚠️ Importante: Certifique-se de que a instância do gerente tenha o tráfego público habilitado nas regras de segurança do grupo (Security Group) da AWS, permitindo acesso à porta 2377/TCP. Sem isso, a automação falhará ao tentar criar o cluster.
+
+4. Execute o playbook:
 
 ```bash
 ansible-playbook -i inventory main.yml
@@ -84,7 +87,11 @@ cd ansible
 ```
 
 2. Update the inventory file with your EC2 instances' IP addresses.
-3. Run the playbook:
+
+3. ⚠️ Important: Make sure the manager instance has public traffic enabled in the AWS Security Group rules, allowing access to port 2377/TCP. Without this, the automation will fail when trying to create the cluster.
+
+4. 
+5. Run the playbook:
 
 ```bash
 ansible-playbook -i inventory main.yml
