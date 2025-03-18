@@ -1,11 +1,31 @@
 ---
-- name: Install nginx
+- name: Install nginx, Node.js, and npm
   dnf:
-    name: nginx
+    name:
+      - nginx
+      - nodejs
+      - npm
     state: present
     update_cache: yes
+
 
 - name: Start nginx
   service:
     name: nginx
     state: started
+
+- name: create dir /app
+  file: 
+    path: /app
+    state: directory
+
+- name: copy package.json
+  copy:
+    src: package.json
+    dest: /app/package.json
+
+- name: npm install
+  npm:
+    path: /app
+    state: present
+
