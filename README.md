@@ -6,19 +6,32 @@ Este projeto automatiza a implantação de um cluster Docker Swarm usando Ansibl
 
 ### Principais Conquistas:
 
-1. 🚀 **Inicialização do Projeto:**
+ 🚀 **Inicialização do Projeto:**
    - Criou o arquivo de inventário e verificou a conexão com todas as três máquinas.
-2. 📦 **Integração com Ansible Galaxy:**
+📦 **Integração com Ansible Galaxy:**
    - Adicionou a estrutura do Ansible Galaxy ao projeto, criando funções modulares.
-3. 🐳 **Instalação do Docker:**
+🐳 **Instalação do Docker:**
    - Instalou o Docker em todas as instâncias EC2.
    - Instalou o Docker Compose em todas as instâncias EC2.
-4. 🔥 **Configuração do Swarm:**
+🔥 **Configuração do Swarm:**
    - Instalou Docker Swarm em todas as máquinas.
    - Configurou o gerente do Swarm.
    - Criou o cluster Swarm, juntando os nós gerente e trabalhadores.
-5. ✅ **Implantação Concluída:**
-   - Implantação bem-sucedida em três instâncias EC2, formando um cluster Docker Swarm completo.
+
+🌐 Configuração do NGINX:
+Além da configuração do Docker Swarm, a automação do NGINX também foi incorporada para atuar como proxy reverso para a aplicação Node.js. Isso foi feito para garantir que o tráfego da web fosse corretamente redirecionado para o backend da aplicação.
+
+Automatização do NGINX:
+Criou e configurou automaticamente o arquivo de configuração do NGINX, utilizando variáveis do Ansible, como url_app, para redirecionar o tráfego para a aplicação Node.js rodando na porta 3000.
+
+Criação de Diretórios e Arquivos:
+Automatizou a criação dos diretórios necessários e a cópia do arquivo de configuração do NGINX para o local correto no sistema.
+
+Verificações e Reinicialização:
+Adicionou verificações automáticas para garantir que a configuração do NGINX fosse válida antes de recarregar o serviço. Após a configuração, o status do NGINX foi verificado para garantir que o serviço estivesse funcionando corretamente.
+
+✅ Implantação Concluída:
+Implantação bem-sucedida em três instâncias EC2, formando um cluster Docker Swarm completo com o NGINX funcionando como proxy reverso para a aplicação Node.js.
 
 ## Habilidades Demonstradas 💪
 
@@ -55,19 +68,32 @@ This project automates the deployment of a Docker Swarm cluster using Ansible on
 
 ### Key Achievements:
 
-1. 🚀 **Project Initialization:**
+ 🚀 **Project Initialization:**
    - Created the inventory file and verified connection with all three machines.
-2. 📦 **Integration with Ansible Galaxy:**
+📦 **Integration with Ansible Galaxy:**
    - Added Ansible Galaxy structure to the project, creating modular roles.
-3. 🐳 **Docker Installation:**
+🐳 **Docker Installation:**
    - Installed Docker on all EC2 instances.
    - Installed Docker Compose on all EC2 instances.
-4. 🔥 **Swarm Configuration:**
+🔥 **Swarm Configuration:**
    - Installed Docker Swarm on all machines.
    - Configured the Swarm manager.
    - Created the Swarm cluster, joining manager and worker nodes.
-5. ✅ **Deployment Completed:**
-   - Successfully deployed across three EC2 instances, forming a complete Docker Swarm cluster.
+   
+🌐 NGINX Setup:
+In addition to the Docker Swarm setup, NGINX automation was also added to act as a reverse proxy for the Node.js application. This ensures that web traffic is correctly routed to the backend application.
+
+NGINX Automation:
+Created and configured the NGINX configuration file automatically using Ansible variables, such as url_app, to route traffic to the Node.js application running on port 3000.
+
+Directory and File Creation:
+Automated the creation of necessary directories and the copying of the NGINX configuration file to the correct system location.
+
+Checks and Restart:
+Added automatic checks to ensure the NGINX configuration is valid before reloading the service. After configuration, the NGINX service status was checked to ensure it was running properly.
+
+✅ Deployment Completed:
+Successful deployment on three EC2 instances, forming a complete Docker Swarm cluster with NGINX working as a reverse proxy for the Node.js application.
 
 ## Skills Demonstrated 💪
 
