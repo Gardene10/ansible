@@ -4,6 +4,14 @@ Este projeto automatiza a implantação de um cluster Docker Swarm usando Ansibl
 
 ## Visão Geral do Projeto 🌟
 
+## Detalhes da máquina/ambiente 🖥️
+
+- **Sistema operacional**: Amazon Linux 2023
+- **Tipo de instância EC2**: t2.micro
+
+This automation was tested on this environment to ensure compatibility.
+
+
 ### Principais Conquistas:
 
  🚀 **Inicialização do Projeto:**
@@ -65,6 +73,11 @@ ansible-playbook -i inventory main.yml
 This project automates the deployment of a Docker Swarm cluster using Ansible on AWS EC2 instances. It covers the entire infrastructure setup, from installing Docker and Docker Compose to creating a Swarm cluster with one manager and two workers, ensuring a robust and automated process.
 
 ## Project Overview 🌟
+## Machine/Environment Details 🖥️
+
+- **Operating System**: Amazon Linux 2023
+- **EC2 Instance Type**: t2.micro
+This automation was tested on this environment to ensure compatibility.
 
 ### Key Achievements:
 
