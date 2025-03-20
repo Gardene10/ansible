@@ -1,9 +1,9 @@
 [manager]
-54.221.90.77
+52.90.113.23
 
-[workers]
-54.172.144.145
-52.72.247.126
+[worker]
+54.173.21.172
+44.203.202.221
 
 [all:vars]
 ansible_ssh_private_key_file=~/.ssh/ansibleK.pem

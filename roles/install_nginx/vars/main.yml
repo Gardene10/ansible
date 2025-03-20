@@ -1,2 +1,4 @@
 ---
 # vars file for install_nginx
+hello_gardene: "Gardene from Ansible !!!"
+url_app: "http://localhost:3000"
